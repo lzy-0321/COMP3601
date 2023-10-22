@@ -37,6 +37,8 @@ void write_wav_header(FILE *wav_file, uint32_t sample_rate, uint32_t num_samples
     memcpy(header.chunk_id, "RIFF", 4);
     header.chunk_size = 36 + num_samples * 2;
     memcpy(header.format, "WAVE", 4);
+
+    // Format chunk
     memcpy(header.subchunk1_id, "fmt ", 4);
     header.subchunk1_size = 16;
     header.audio_format = 1;
