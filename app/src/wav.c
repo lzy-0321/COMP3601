@@ -44,7 +44,7 @@ void write_wav_header(FILE *wav_file, uint32_t sample_rate, uint32_t num_samples
     header.sample_rate = sample_rate;
     header.byte_rate = sample_rate * 2;
     header.block_align = 2;
-    header.bits_per_sample = 16;
+    header.bits_per_sample = 32; // We are storing audio as 32 bits)
     memcpy(header.subchunk2_id, "data", 4);
     header.subchunk2_size = num_samples * 2;
 
