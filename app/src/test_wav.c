@@ -8,7 +8,7 @@
 #define SAMPLE_RATE 44100
 #define DURATION 2
 #define FREQUENCY 440.0
-#define AMPLITUDE 32767  // Maximum value for 16-bit signed integer
+#define AMPLITUDE 2147483647  // Maximum value for 32-bit signed integer
 
 int main() {
     int num_samples = SAMPLE_RATE * DURATION;
