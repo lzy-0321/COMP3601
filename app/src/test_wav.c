@@ -18,13 +18,13 @@ int main() {
 
     // Fill buffer with a sine wave
     for (int i = 0; i < num_samples; ++i) {
-        data[i] = (short int)(AMPLITUDE * sin(phase));
+        data[i] = (int)(AMPLITUDE * sin(phase)); // Need to use int (short int only stores 16 bits)
         phase += freq_radians_per_sample;
     }
 
     // Write the WAV file
     write_wav("test.wav", num_samples, data, SAMPLE_RATE);
 
-    printf("16-bit WAV file test.wav has been created\n");
+    printf("32-bit WAV file test.wav has been created\n");
     return 0;
 }
