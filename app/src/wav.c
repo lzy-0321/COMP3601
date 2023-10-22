@@ -35,7 +35,7 @@ void write_little_endian(uint32_t word, int num_bytes, FILE *wav_file) {
 void write_wav_header(FILE *wav_file, uint32_t sample_rate, uint32_t num_samples) {
     WAV_Header header;
     memcpy(header.chunk_id, "RIFF", 4);
-    header.chunk_size = 36 + num_samples * 2;
+    header.chunk_size = 36 + num_samples * 4; // As there are 4 bytes (32 bits) per sample
     memcpy(header.format, "WAVE", 4);
 
     // Format chunk
@@ -44,11 +44,11 @@ void write_wav_header(FILE *wav_file, uint32_t sample_rate, uint32_t num_samples
     header.audio_format = 1;
     header.num_channels = 1;
     header.sample_rate = sample_rate;
-    header.byte_rate = sample_rate * 2;
-    header.block_align = 2;
+    header.byte_rate = sample_rate * 4; //4 bytes per sample
+    header.block_align = 4;
     header.bits_per_sample = 32; // We are storing audio as 32 bits
     memcpy(header.subchunk2_id, "data", 4);
-    header.subchunk2_size = num_samples * 2;
+    header.subchunk2_size = num_samples * 4;
 
     fwrite(&header, sizeof(header), 1, wav_file);
 }
@@ -64,7 +64,7 @@ void write_wav(char *filename, unsigned long num_samples, short int *data, uint3
     write_wav_header(wav_file, sample_rate, num_samples);
 
     for (unsigned long i = 0; i < num_samples; i++) {
-        write_little_endian((uint32_t)data[i], 2, wav_file);  // Writing 16-bit samples
+        write_little_endian((uint32_t)data[i], 4, wav_file);  // Writing 32-bit samples
     }
 
     fclose(wav_file);
