@@ -2,8 +2,8 @@
 #ifndef WAV_H
 #define WAV_H
 
-#include <stdint.h>
 #include <stdio.h>
+#include <stdint.h>
 
 // Define the WAV file header structure
 typedef struct {

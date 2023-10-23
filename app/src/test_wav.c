@@ -1,14 +1,16 @@
 // In test_wav.c
+#define _USE_MATH_DEFINES
+
 #include <stdio.h>
 #include <math.h>
 #include <stdint.h>
-#include "wav.h"
+#include "../include/wav.h"
 
 #define M_PI 3.14159265358979323846
 #define SAMPLE_RATE 44100
 #define DURATION 2
 #define FREQUENCY 440.0
-#define AMPLITUDE 2147483647  // Maximum value for 32-bit signed integer
+#define AMPLITUDE 32767  // Maximum value for 16-bit signed integer
 
 int main() {
     int num_samples = SAMPLE_RATE * DURATION;
@@ -18,13 +20,13 @@ int main() {
 
     // Fill buffer with a sine wave
     for (int i = 0; i < num_samples; ++i) {
-        data[i] = (int)(AMPLITUDE * sin(phase)); // Need to use int (short int only stores 16 bits)
+        data[i] = (short int)(AMPLITUDE * sin(phase));
         phase += freq_radians_per_sample;
     }
 
     // Write the WAV file
     write_wav("test.wav", num_samples, data, SAMPLE_RATE);
 
-    printf("32-bit WAV file test.wav has been created\n");
+    printf("16-bit WAV file test.wav has been created\n");
     return 0;
 }
