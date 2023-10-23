@@ -1,3 +1,9 @@
+compile test_wa.c
+
+~ gcc -o test_wav test_wav.c wav.c -lm
+
+
+
 cross compile  x86 - aarch64
 
 1. download petalinux
