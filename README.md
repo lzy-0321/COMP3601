@@ -4,7 +4,14 @@ compile test_wa.c
 
 
 
+
+
 cross compile  x86 - aarch64
+
+source everytime
+~ bash
+
+~ export PATH=$PATH:/opt/petalinux/2021.1/sysroots/x86_64-petalinux-linux/usr/bin/aarch64-xilinx-linux
 
 1. download petalinux
    https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/embedded-design-tools/archive.html
