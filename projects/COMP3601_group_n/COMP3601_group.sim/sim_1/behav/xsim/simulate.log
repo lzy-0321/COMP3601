@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+Failure: End of simulation
+Time: 1300 ns  Iteration: 0  Process: /ws_testbench/end_of_sim  File: D:/projects/COMP3601_group/COMP3601_group.srcs/sim_1/new/test_ws.vhd
+$finish called at time : 1300 ns : File "D:/projects/COMP3601_group/COMP3601_group.srcs/sim_1/new/test_ws.vhd" Line 84

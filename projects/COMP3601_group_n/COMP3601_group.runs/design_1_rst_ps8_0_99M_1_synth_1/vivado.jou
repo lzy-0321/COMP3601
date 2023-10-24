@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue Oct  3 19:53:41 2023
+# Process ID: 4080
+# Current directory: C:/Users/cse/Desktop/COMP3601/projects/COMP3601_group/COMP3601_group.runs/design_1_rst_ps8_0_99M_1_synth_1
+# Command line: vivado.exe -log design_1_rst_ps8_0_99M_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_rst_ps8_0_99M_1.tcl
+# Log file: C:/Users/cse/Desktop/COMP3601/projects/COMP3601_group/COMP3601_group.runs/design_1_rst_ps8_0_99M_1_synth_1/design_1_rst_ps8_0_99M_1.vds
+# Journal file: C:/Users/cse/Desktop/COMP3601/projects/COMP3601_group/COMP3601_group.runs/design_1_rst_ps8_0_99M_1_synth_1\vivado.jou
+# Running On: DESKTOP-G4LP6B2, OS: Windows, CPU Frequency: 3302 MHz, CPU Physical cores: 2, Host memory: 8589 MB
+#-----------------------------------------------------------
+source design_1_rst_ps8_0_99M_1.tcl -notrace
