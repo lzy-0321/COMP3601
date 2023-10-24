@@ -106,7 +106,18 @@ int main() {
         parsemem(frames[i], TRANSFER_LEN);
         printf("==============================\n");
     }
-    
+
+    int buffer[TRANSFER_RUNS*TRANSFER_LEN]={0};
+    int i, j, k = 0;
+    for (i = 0; i < TRANSFER_RUNS; i++) {
+        for (j = 0; j < TRANSFER_LEN; j++) {
+            buffer[k++] = frames[i][j];
+        }
+    }
+
+    write_wav("test.wav",TRANSFER_RUNS*TRANSFER_LEN, buffer, SAMPLE_RATE);
+
+
     audio_i2s_release(&my_config);
 
     return 0;

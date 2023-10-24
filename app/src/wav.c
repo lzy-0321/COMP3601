@@ -52,7 +52,7 @@ void write_wav_header(FILE *wav_file, uint32_t sample_rate, uint32_t num_samples
 }
 
 // Main function to write the WAV file
-void write_wav(char *filename, unsigned long num_samples, short int *data, uint32_t sample_rate) {
+void write_wav(char *filename, unsigned long num_samples, int *data, uint32_t sample_rate) {
     FILE *wav_file = fopen(filename, "wb");
     if (!wav_file) {
         fprintf(stderr, "Error: could not open file '%s' for writing\n", filename);

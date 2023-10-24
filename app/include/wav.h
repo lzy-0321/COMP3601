@@ -48,6 +48,6 @@ void write_wav_header(FILE *wav_file, uint32_t sample_rate, uint32_t num_samples
  * @param data The audio data.
  * @param sample_rate The sample rate of the audio.
  */
-void write_wav(char *filename, unsigned long num_samples, short int *data, uint32_t sample_rate);
+void write_wav(char *filename, unsigned long num_samples, int *data, uint32_t sample_rate);
 
 #endif // WAV_H
