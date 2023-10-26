@@ -14,7 +14,7 @@
 
 int main() {
     int num_samples = SAMPLE_RATE * DURATION;
-    short int data[num_samples];
+    int data[num_samples];
     double freq_radians_per_sample = FREQUENCY * 2 * M_PI / SAMPLE_RATE;
     double phase = 0;
 

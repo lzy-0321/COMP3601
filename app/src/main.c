@@ -26,7 +26,7 @@
 #include <stdint.h>
 
 #include "audio_i2s.h"
-// #include "wav.h"
+#include "../include/wav.h"
 
 
 #define TRANSFER_RUNS 10
@@ -84,10 +84,10 @@ int main() {
     printf("Before writing to gain: %08x\n", audio_i2s_get_reg(&my_config, AUDIO_I2S_GAIN));
     audio_i2s_set_reg(&my_config, AUDIO_I2S_GAIN, 0x1);
     printf("After writing to gain: %08x\n", audio_i2s_get_reg(&my_config, AUDIO_I2S_GAIN));
-    
 
 
-    
+
+
     // audio_i2s_release(&my_config);
 
     // return 0;
@@ -106,7 +106,18 @@ int main() {
         parsemem(frames[i], TRANSFER_LEN);
         printf("==============================\n");
     }
-    
+
+    int *buffer[TRANSFER_RUNS*TRANSFER_LEN]={0};
+    int i, j, k = 0;
+    for (i = 0; i < TRANSFER_RUNS; i++) {
+        for (j = 0; j < TRANSFER_LEN; j++) {
+            buffer[k++] = frames[i][j];
+        }
+    }
+
+    write_wav("/lib/firmware/xilinx/i2s-master/test.wav",TRANSFER_RUNS*TRANSFER_LEN, buffer, SAMPLE_RATE);
+
+
     audio_i2s_release(&my_config);
 
     return 0;
