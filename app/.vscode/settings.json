@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.java": "java",
+        "audio_i2s.h": "c"
+    }
+}
