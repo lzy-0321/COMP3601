@@ -52,17 +52,18 @@ void write_wav_header(FILE *wav_file, uint32_t sample_rate, uint32_t num_samples
 }
 
 // Main function to write the WAV file
-void write_wav(char *filename, unsigned long num_samples, int *data, uint32_t sample_rate) {
+void write_wav(const char *filename, unsigned long num_samples, int32_t *data, uint32_t sample_rate) {
     FILE *wav_file = fopen(filename, "wb");
     if (!wav_file) {
         fprintf(stderr, "Error: could not open file '%s' for writing\n", filename);
         return;
     }
 
+    // Assuming you are using a 32-bit PCM format, you need to adjust the header accordingly
     write_wav_header(wav_file, sample_rate, num_samples);
 
     for (unsigned long i = 0; i < num_samples; i++) {
-        write_little_endian((uint32_t)data[i], 2, wav_file);  // Writing 16-bit samples
+        write_little_endian((uint32_t)data[i], 4, wav_file);  // Writing 32-bit samples
     }
 
     fclose(wav_file);
