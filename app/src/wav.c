@@ -35,18 +35,18 @@ void write_little_endian(uint32_t word, int num_bytes, FILE *wav_file) {
 void write_wav_header(FILE *wav_file, uint32_t sample_rate, uint32_t num_samples) {
     WAV_Header header;
     memcpy(header.chunk_id, "RIFF", 4);
-    header.chunk_size = 36 + num_samples * 2;
+    header.chunk_size = 36 + num_samples * 4;
     memcpy(header.format, "WAVE", 4);
     memcpy(header.subchunk1_id, "fmt ", 4);
     header.subchunk1_size = 16;
     header.audio_format = 1;
     header.num_channels = 1;
     header.sample_rate = sample_rate;
-    header.byte_rate = sample_rate * 2;
-    header.block_align = 2;
-    header.bits_per_sample = 16;
+    header.byte_rate = sample_rate * 4;
+    header.block_align = 4;
+    header.bits_per_sample = 32;
     memcpy(header.subchunk2_id, "data", 4);
-    header.subchunk2_size = num_samples * 2;
+    header.subchunk2_size = num_samples * 4;
 
     fwrite(&header, sizeof(header), 1, wav_file);
 }
