@@ -88,10 +88,6 @@ int main() {
 
 
 
-    // audio_i2s_release(&my_config);
-
-    // return 0;
-
 
     printf("Initialized audio_i2s\n");
     printf("Starting audio_i2s_recv\n");
