@@ -26,15 +26,68 @@
 #include <stdint.h>
 
 #include "audio_i2s.h"
-#include "../include/wav.h"
 
 
-#define TRANSFER_RUNS 10
+
+#define TRANSFER_RUNS 50
 
 #define NUM_CHANNELS 2
 #define BPS 24
 #define SAMPLE_RATE 44100
 #define RECORD_DURATION 10
+
+
+//Write header file
+typedef struct {
+    char chunkId[4];
+    uint32_t chunkSize;
+    char format[4];
+    char subchunk1Id[4];
+    uint32_t subchunk1Size;
+    uint16_t audioFormat;
+    uint16_t numChannels;
+    uint32_t sampleRate;
+    uint32_t byteRate;
+    uint16_t blockAlign;
+    uint16_t bitsPerSample;
+    char subchunk2Id[4];
+    uint32_t subchunk2Size;
+} WavHeader;
+
+
+void write_wav(const char* file, uint32_t* data, uint32_t numSamples, uint32_t sampleRate) {
+    WavHeader header;
+
+    memcpy(header.chunkId, "RIFF", 4);
+    header.chunkSize = 36 + (numSamples * sizeof(uint32_t));
+    memcpy(header.format, "WAVE", 4);
+    memcpy(header.subchunk1Id, "fmt ", 4);
+    header.subchunk1Size = 16;
+    header.audioFormat = 1;
+    header.numChannels = 1;
+    header.sampleRate = sampleRate;
+    header.byteRate = 264600;
+    header.blockAlign = 6;
+    header.bitsPerSample = BPS;
+    memcpy(header.subchunk2Id, "data", 4);
+    header.subchunk2Size = numSamples * sizeof(uint32_t);
+
+    FILE* Wavfile = fopen(file, "wb");
+    if (Wavfile == NULL) {
+        printf("Error initializing audio_i2s\n");
+        return;
+    }
+
+    fwrite(&header, sizeof(WavHeader), 1, Wavfile);
+    fwrite(data, sizeof(uint32_t), numSamples, Wavfile);
+    fclose(Wavfile);
+}
+
+
+
+
+////////////////////////////////////////////////////////
+
 
 void bin(uint8_t n) {
     uint8_t i;
@@ -103,7 +156,7 @@ int main() {
         printf("==============================\n");
     }
 
-    int32_t buffer[TRANSFER_RUNS * TRANSFER_LEN] = {0};
+    uint32_t buffer[TRANSFER_RUNS * TRANSFER_LEN] = {0};
     int i, j, k = 0;
     for (i = 0; i < TRANSFER_RUNS; i++) {
         for (j = 0; j < TRANSFER_LEN; j++) {
@@ -111,7 +164,8 @@ int main() {
         }
     }
 
-    write_wav("/lib/firmware/xilinx/i2s-master/test.wav",TRANSFER_RUNS*TRANSFER_LEN, buffer, SAMPLE_RATE);
+    const char* outputAudio = "/lib/firmware/xilinx/i2s-master/test.wav";
+    write_wav(outputAudio,buffer,TRANSFER_RUNS*TRANSFER_LEN,  SAMPLE_RATE);
 
 
     audio_i2s_release(&my_config);
