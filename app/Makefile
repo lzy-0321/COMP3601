@@ -51,7 +51,6 @@ BINARY = sample256
 OBJ = $(BUILD_DIR)/main.o \
       $(BUILD_DIR)/audio_i2s.o \
       $(BUILD_DIR)/axi_dma.o \
-	  $(BUILD_DIR)/wav.o \
 
 .PHONY: clean
 
@@ -70,9 +69,6 @@ $(BUILD_DIR)/audio_i2s.o: src/audio_i2s.c include/audio_i2s.h include/axi_dma.h 
 	$(CXX) $(CFLAGS) $(CPPFLAGS) $(LANGFLAG) $< -c -o $@
 
 $(BUILD_DIR)/axi_dma.o: src/axi_dma.c include/axi_dma.h include/misc.h
-	$(CXX) $(CFLAGS) $(CPPFLAGS) $(LANGFLAG) $< -c -o $@
-
-$(BUILD_DIR)/wav.o: src/wav.c include/wav.h
 	$(CXX) $(CFLAGS) $(CPPFLAGS) $(LANGFLAG) $< -c -o $@
 
 clean:
