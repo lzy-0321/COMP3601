@@ -5,6 +5,10 @@
 #include <stdint.h>
 #include <stdio.h>
 
+#define NUM_CHANNELS 2
+#define BPS 24
+#define SAMPLE_RATE 44100
+
 // Define the WAV file header structure
 typedef struct {
     char chunk_id[4];

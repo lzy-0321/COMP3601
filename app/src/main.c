@@ -30,10 +30,6 @@
 
 
 #define TRANSFER_RUNS 10
-
-#define NUM_CHANNELS 2
-#define BPS 24
-#define SAMPLE_RATE 44100
 #define RECORD_DURATION 10
 
 void bin(uint8_t n) {
@@ -107,11 +103,12 @@ int main() {
         printf("==============================\n");
     }
 
-    int32_t buffer[TRANSFER_RUNS * TRANSFER_LEN] = {0};
-    int i, j, k = 0;
-    for (i = 0; i < TRANSFER_RUNS; i++) {
-        for (j = 0; j < TRANSFER_LEN; j++) {
-            buffer[k++] = (int32_t)frames[i][j];
+    uint32_t buffer[TRANSFER_RUNS*TRANSFER_LEN]={0};
+
+    for (int i = 0; i < TRANSFER_RUNS; i++) {
+        for (int j = 0; j < TRANSFER_LEN; j++)
+        {
+            buffer[i*TRANSFER_LEN+j] = frames[i][j];
         }
     }
 
