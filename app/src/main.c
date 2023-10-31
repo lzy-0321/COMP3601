@@ -29,7 +29,7 @@
 
 
 
-#define TRANSFER_RUNS 5000
+#define TRANSFER_RUNS 2000
 
 #define NUM_CHANNELS 2
 #define BPS 24
@@ -187,6 +187,7 @@ int main() {
         for (j = 0; j < TRANSFER_LEN; j++) {
 
             buffer[k++] = (int32_t)frames[i][j];
+            //&0x0003ffff <<14)
 
         }
     }
