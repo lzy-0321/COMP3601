@@ -108,18 +108,15 @@ int main() {
     for (int i = 0; i < TRANSFER_RUNS; i++) {
         for (int j = 0; j < TRANSFER_LEN; j++)
         {
-            // 在写入buffer的时候，反转buffer中的每一个32bits, 将第一位写入最后一位，第二位写入倒数第二位等等
+            // 在写入buffer的时候，反转buffer中的每一个32bits,中的前18bits，18bits之后的不变
             buffer[i*TRANSFER_LEN+j] = frames[i][j];
         }
     }
 
     //反转buffer
     for (int i = 0; i < TRANSFER_RUNS*TRANSFER_LEN; i++) {
-        uint32_t temp = buffer[i];
-        buffer[i] = 0;
-        for (int j = 0; j < 32; j++) {
-            buffer[i] |= ((temp >> j) & 0x1) << (31-j);
-        }
+        buffer[i] = ((buffer[i] & 0x0003ffff) << 14) | ((buffer[i] & 0xfffc0000) >> 14);
+        printf("buffer[%d]: %08x\n", i, buffer[i]);
     }
 
     write_wav("/lib/firmware/xilinx/i2s-master/test.wav",TRANSFER_RUNS*TRANSFER_LEN, buffer, SAMPLE_RATE);
