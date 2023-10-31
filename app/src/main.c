@@ -59,7 +59,7 @@ void write_wav(const char* file, uint32_t* data, uint32_t numSamples, uint32_t s
     WavHeader header;
 
     memcpy(header.chunkId, "RIFF", 4);
-    header.chunkSize = 36 + (numSamples * sizeof(uint32_t));
+    header.chunkSize = 36 + (numSamples * 4);
     memcpy(header.format, "WAVE", 4);
     memcpy(header.subchunk1Id, "fmt ", 4);
     header.subchunk1Size = 16;
@@ -70,7 +70,7 @@ void write_wav(const char* file, uint32_t* data, uint32_t numSamples, uint32_t s
     header.blockAlign = 6;
     header.bitsPerSample = BPS;
     memcpy(header.subchunk2Id, "data", 4);
-    header.subchunk2Size = numSamples * sizeof(uint32_t);
+    header.subchunk2Size = numSamples * 4;
 
     FILE* Wavfile = fopen(file, "wb");
     if (Wavfile == NULL) {
@@ -159,7 +159,7 @@ int main() {
     uint32_t buffer[TRANSFER_RUNS * TRANSFER_LEN] = {0};
     int i, j, k = 0;
     for (i = 0; i < TRANSFER_RUNS; i++) {
-        for (j = 0; j < TRANSFER_LEN; j++) {
+        for (j = TRANSFER_LEN; j >= 0; j--) {
             buffer[k++] = (int32_t)frames[i][j];
         }
     }
