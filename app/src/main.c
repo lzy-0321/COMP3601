@@ -120,7 +120,7 @@ int main() {
             buffer[i*TRANSFER_LEN+j] = ((buffer[i*TRANSFER_LEN+j] & 0x0003ffff) << 14) | ((buffer[i*TRANSFER_LEN+j] & 0xfffc0000) >> 14);
             // print frame
             printf("frame[%d][%d]: %02x, %08x\n", i, j, frames[i][j], frames[i][j]);
-            printf("buffer[%d]: %02x, %08x\n", i, buffer[i], buffer[i]);
+            printf("buffer[%d]: %02x, %08x\n", i, buffer[i*TRANSFER_LEN+j], buffer[i*TRANSFER_LEN+j]);
         }
     }
 
