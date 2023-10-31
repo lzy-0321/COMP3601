@@ -127,15 +127,15 @@ int main() {
     }
 
     // //反转buffer
-    for (int i = 0; i < TRANSFER_RUNS; i++) {
-        for (int j = 0; j < TRANSFER_LEN; j++)
-        {
-            buffer[i*TRANSFER_LEN+j] = reverseBits(buffer[i*TRANSFER_LEN+j]);
-            // print frame
-            printf("frame[%d][%d]: %02x\n", i, j, frames[i][j]);
-            printf("buffer[%d]: %02x\n", i, buffer[i*TRANSFER_LEN+j]);
-        }
-    }
+    // for (int i = 0; i < TRANSFER_RUNS; i++) {
+    //     for (int j = 0; j < TRANSFER_LEN; j++)
+    //     {
+    //         buffer[i*TRANSFER_LEN+j] = reverseBits(buffer[i*TRANSFER_LEN+j]);
+    //         // print frame
+    //         printf("frame[%d][%d]: %02x\n", i, j, frames[i][j]);
+    //         printf("buffer[%d]: %02x\n", i, buffer[i*TRANSFER_LEN+j]);
+    //     }
+    // }
 
     write_wav("/home/root/m3/test.wav",TRANSFER_RUNS*TRANSFER_LEN, buffer, SAMPLE_RATE);
 
