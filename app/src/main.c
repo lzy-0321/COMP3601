@@ -87,19 +87,27 @@ void write_wav(const char* file, uint32_t* data, uint32_t numSamples, uint32_t s
 
 
 
-// uint32_t reverseBits(uint32_t num) {
-//     uint32_t reversed = 0;
-//     int i;
+uint32_t reverseBits(uint32_t num) {
+    uint32_t reversed = 0;
+    int i;
     
-//     for (i = 0; i < 32; i++) {
-//         reversed <<= 1;  // Shift left by 1
-//         reversed |= (num & 1);  // Set the least significant bit of the reversed number
-//         num >>= 1;  // Shift the original number right by 1
-//     }
+    for (i = 0; i < 32; i++) {
+        reversed <<= 1;  // Shift left by 1
+        reversed |= (num & 1);  // Set the least significant bit of the reversed number
+        num >>= 1;  // Shift the original number right by 1
+    }
 
-//     return reversed;
-// }
+    return reversed;
+}
 
+
+uint32_t shiftLast18ToFrontAndClearLast14(uint32_t num) {
+    uint32_t last18 = num & ((1 << 18) - 1);  // Extract the last 18 bits
+    uint32_t remaining = num >> 18;  // Get the remaining bits after the last 18 bits
+    uint32_t combined = (last18 << (32 - 18)) | remaining;  // Shift the last 18 bits to the front and OR with the remaining bits
+    uint32_t clearLast14Mask = ~((1 << 14) - 1);  // Create a mask to clear the last 14 bits
+    return combined & clearLast14Mask;  // AND the combined number with the mask to clear the last 14 bits
+}
 
 
 
@@ -181,15 +189,19 @@ int main() {
     }
 
     uint32_t buffer[TRANSFER_RUNS * TRANSFER_LEN] = {0};
-    //char chache;
+    uint32_t cache[TRANSFER_RUNS * TRANSFER_LEN] = {0};
     int i, j, k = 0;
     for (i = 0; i < TRANSFER_RUNS; i++) {
         for (j = 0; j < TRANSFER_LEN; j++) {
 
-            buffer[k++] = (int32_t)frames[i][j];
+            cache[k++] = (int32_t)frames[i][j];
             //&0x0003ffff <<14)
 
         }
+    }
+    int counter;
+    for ( counter = 0; j < TRANSFER_LEN * TRANSFER_RUNS; counter++){
+        buffer[counter] = shiftLast18ToFrontAndClearLast14(reverseBits(cache[counter])) ;
     }
 
     const char* outputAudio = "/lib/firmware/xilinx/i2s-master/test.wav";
