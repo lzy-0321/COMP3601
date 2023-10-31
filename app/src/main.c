@@ -119,7 +119,7 @@ int main() {
         printf("buffer[%d]: %08x\n", i, buffer[i]);
     }
 
-    write_wav("/lib/firmware/xilinx/i2s-master/test.wav",TRANSFER_RUNS*TRANSFER_LEN, buffer, SAMPLE_RATE);
+    write_wav("/home/root/m3/test.wav",TRANSFER_RUNS*TRANSFER_LEN, buffer, SAMPLE_RATE);
 
 
     audio_i2s_release(&my_config);
