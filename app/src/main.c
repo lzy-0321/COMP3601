@@ -26,18 +26,18 @@
 #include <stdint.h>
 
 #include "audio_i2s.h"
-#include "../include/wav.h"
 
 
-#define TRANSFER_RUNS 10
+
+#define TRANSFER_RUNS 5000
 
 #define NUM_CHANNELS 2
 #define BPS 24
 #define SAMPLE_RATE 44100
 #define RECORD_DURATION 10
 
-<<<<<<< HEAD
 
+char temp;
 //Write header file
 typedef struct {
     char chunkId[4];
@@ -87,11 +87,32 @@ void write_wav(const char* file, uint32_t* data, uint32_t numSamples, uint32_t s
 
 
 
+// uint32_t reverseBits(uint32_t num) {
+//     uint32_t reversed = 0;
+//     int i;
+    
+//     for (i = 0; i < 32; i++) {
+//         reversed <<= 1;  // Shift left by 1
+//         reversed |= (num & 1);  // Set the least significant bit of the reversed number
+//         num >>= 1;  // Shift the original number right by 1
+//     }
+
+//     return reversed;
+// }
+
+
+
+
+
+
+
+
+
+
+
 ////////////////////////////////////////////////////////
 
 
-=======
->>>>>>> parent of 2b4c48c (Delete wav.c and wav.h.)
 void bin(uint8_t n) {
     uint8_t i;
     // for (i = 1 << 7; i > 0; i = i >> 1)
@@ -159,15 +180,19 @@ int main() {
         printf("==============================\n");
     }
 
-    int32_t buffer[TRANSFER_RUNS * TRANSFER_LEN] = {0};
+    uint32_t buffer[TRANSFER_RUNS * TRANSFER_LEN] = {0};
+    //char chache;
     int i, j, k = 0;
     for (i = 0; i < TRANSFER_RUNS; i++) {
-        for (j = TRANSFER_LEN; j >= 0; j--) {
+        for (j = 0; j < TRANSFER_LEN; j++) {
+
             buffer[k++] = (int32_t)frames[i][j];
+
         }
     }
 
-    write_wav("/lib/firmware/xilinx/i2s-master/test.wav",TRANSFER_RUNS*TRANSFER_LEN, buffer, SAMPLE_RATE);
+    const char* outputAudio = "/lib/firmware/xilinx/i2s-master/test.wav";
+    write_wav(outputAudio,buffer,TRANSFER_RUNS*TRANSFER_LEN,  SAMPLE_RATE);
 
 
     audio_i2s_release(&my_config);
