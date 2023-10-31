@@ -53,7 +53,7 @@ void write_wav(const char *filename, unsigned long num_samples, uint32_t *data, 
     // Assuming you are using a 32-bit PCM format, you need to adjust the header accordingly
     write_wav_header(wav_file, sample_rate, num_samples);
 
-     fwrite(data, sizeof(uint32_t), num_samples, wav_file);  // Writing 32-bit samples
+    fwrite(data, sizeof(uint32_t), num_samples, wav_file);  // Writing 32-bit samples
 
     fclose(wav_file);
 }
