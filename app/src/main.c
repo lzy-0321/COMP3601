@@ -26,16 +26,17 @@
 #include <stdint.h>
 
 #include "audio_i2s.h"
+#include "../include/wav.h"
 
 
-
-#define TRANSFER_RUNS 50
+#define TRANSFER_RUNS 10
 
 #define NUM_CHANNELS 2
 #define BPS 24
 #define SAMPLE_RATE 44100
 #define RECORD_DURATION 10
 
+<<<<<<< HEAD
 
 //Write header file
 typedef struct {
@@ -89,6 +90,8 @@ void write_wav(const char* file, uint32_t* data, uint32_t numSamples, uint32_t s
 ////////////////////////////////////////////////////////
 
 
+=======
+>>>>>>> parent of 2b4c48c (Delete wav.c and wav.h.)
 void bin(uint8_t n) {
     uint8_t i;
     // for (i = 1 << 7; i > 0; i = i >> 1)
@@ -156,7 +159,7 @@ int main() {
         printf("==============================\n");
     }
 
-    uint32_t buffer[TRANSFER_RUNS * TRANSFER_LEN] = {0};
+    int32_t buffer[TRANSFER_RUNS * TRANSFER_LEN] = {0};
     int i, j, k = 0;
     for (i = 0; i < TRANSFER_RUNS; i++) {
         for (j = TRANSFER_LEN; j >= 0; j--) {
@@ -164,8 +167,7 @@ int main() {
         }
     }
 
-    const char* outputAudio = "/lib/firmware/xilinx/i2s-master/test.wav";
-    write_wav(outputAudio,buffer,TRANSFER_RUNS*TRANSFER_LEN,  SAMPLE_RATE);
+    write_wav("/lib/firmware/xilinx/i2s-master/test.wav",TRANSFER_RUNS*TRANSFER_LEN, buffer, SAMPLE_RATE);
 
 
     audio_i2s_release(&my_config);
