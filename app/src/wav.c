@@ -33,9 +33,9 @@ void write_wav_header(FILE *wav_file, uint32_t sample_rate, uint32_t num_samples
     header.audio_format = 1;
     header.num_channels = NUM_CHANNELS;
     header.sample_rate = sample_rate;
-    header.byte_rate = 264600;
-    header.block_align = 6;
-    header.bits_per_sample = BPS;
+    header.byte_rate = sample_rate * 4;
+    header.block_align = 4;
+    header.bits_per_sample = 32;
     memcpy(header.subchunk2_id, "data", 4);
     header.subchunk2_size = num_samples * sizeof(uint32_t);
 
