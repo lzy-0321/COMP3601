@@ -32,6 +32,19 @@
 #define TRANSFER_RUNS 1000
 #define RECORD_DURATION 10
 
+uint32_t reverseBits(uint32_t num) {
+    num = num >> 14;
+    uint32_t reverse_num = 0;
+    int no_of_bits = 18;
+    int i;
+    for (i = 0; i < 18; i++) {
+        if ((num & (1 << i)))
+            reverse_num |= 1 << ((no_of_bits - 1) - i);
+    }
+
+    return reverse_num << 14;
+}
+
 void bin(uint8_t n) {
     uint8_t i;
     // for (i = 1 << 7; i > 0; i = i >> 1)
@@ -114,14 +127,15 @@ int main() {
     }
 
     // //反转buffer
-    // for (int i = 0; i < TRANSFER_RUNS; i++) {
-    //     for (int j = 0; j < TRANSFER_LEN; j++)
-    //     {
-    //         buffer[i*TRANSFER_LEN+j] = ((buffer[i*TRANSFER_LEN+j] & 0x0003ffff) << 14) | ((buffer[i*TRANSFER_LEN+j] & 0xfffc0000) >> 14);
-    //         // print frame
-    //         printf("frame[%d][%d]: %02x, %08x\n", i, j, frames[i][j], frames[i][j]);
-    //         printf("buffer[%d]: %02x, %08x\n", i, buffer[i*TRANSFER_LEN+j], buffer[i*TRANSFER_LEN+j]);
-    //     }
+    for (int i = 0; i < TRANSFER_RUNS; i++) {
+        for (int j = 0; j < TRANSFER_LEN; j++)
+        {
+            buffer[i*TRANSFER_LEN+j] = reverseBits(buffer[i*TRANSFER_LEN+j]);
+            // print frame
+            printf("frame[%d][%d]: %02x\n", i, j, frames[i][j]);
+            printf("buffer[%d]: %02x\n", i, buffer[i*TRANSFER_LEN+j]);
+        }
+    }
 
     write_wav("/home/root/m3/test.wav",TRANSFER_RUNS*TRANSFER_LEN, buffer, SAMPLE_RATE);
 
@@ -130,3 +144,5 @@ int main() {
 
     return 0;
 }
+
+
