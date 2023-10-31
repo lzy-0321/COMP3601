@@ -29,7 +29,7 @@
 #include "../include/wav.h"
 
 
-#define TRANSFER_RUNS 10
+#define TRANSFER_RUNS 100
 #define RECORD_DURATION 10
 
 void bin(uint8_t n) {
