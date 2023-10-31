@@ -113,16 +113,15 @@ int main() {
         }
     }
 
-    //反转buffer
-    for (int i = 0; i < TRANSFER_RUNS; i++) {
-        for (int j = 0; j < TRANSFER_LEN; j++)
-        {
-            buffer[i*TRANSFER_LEN+j] = ((buffer[i*TRANSFER_LEN+j] & 0x0003ffff) << 14) | ((buffer[i*TRANSFER_LEN+j] & 0xfffc0000) >> 14);
-            // print frame
-            printf("frame[%d][%d]: %02x, %08x\n", i, j, frames[i][j], frames[i][j]);
-            printf("buffer[%d]: %02x, %08x\n", i, buffer[i*TRANSFER_LEN+j], buffer[i*TRANSFER_LEN+j]);
-        }
-    }
+    // //反转buffer
+    // for (int i = 0; i < TRANSFER_RUNS; i++) {
+    //     for (int j = 0; j < TRANSFER_LEN; j++)
+    //     {
+    //         buffer[i*TRANSFER_LEN+j] = ((buffer[i*TRANSFER_LEN+j] & 0x0003ffff) << 14) | ((buffer[i*TRANSFER_LEN+j] & 0xfffc0000) >> 14);
+    //         // print frame
+    //         printf("frame[%d][%d]: %02x, %08x\n", i, j, frames[i][j], frames[i][j]);
+    //         printf("buffer[%d]: %02x, %08x\n", i, buffer[i*TRANSFER_LEN+j], buffer[i*TRANSFER_LEN+j]);
+    //     }
 
     write_wav("/home/root/m3/test.wav",TRANSFER_RUNS*TRANSFER_LEN, buffer, SAMPLE_RATE);
 
