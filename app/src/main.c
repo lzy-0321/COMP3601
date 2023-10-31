@@ -200,7 +200,7 @@ int main() {
         }
     }
     int counter;
-    for ( counter = 0; j < TRANSFER_LEN * TRANSFER_RUNS; counter++){
+    for ( counter = 0; counter < TRANSFER_LEN * TRANSFER_RUNS; counter++){
         buffer[counter] = shiftLast18ToFrontAndClearLast14(reverseBits(cache[counter])) ;
     }
 
