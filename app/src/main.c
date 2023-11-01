@@ -32,17 +32,18 @@
 #define TRANSFER_RUNS 1000
 #define RECORD_DURATION 10
 
+
 uint32_t reverseBits(uint32_t num) {
-    num = num >> 14;
-    uint32_t reverse_num = 0;
-    int no_of_bits = 18;
+    uint32_t reversed = 0;
     int i;
-    for (i = 0; i < 18; i++) {
-        if ((num & (1 << i)))
-            reverse_num |= 1 << ((no_of_bits - 1) - i);
+
+    for (i = 0; i < 32; i++) {
+        reversed <<= 1;  // Shift left by 1
+        reversed |= (num & 1);  // Set the least significant bit of the reversed number
+        num >>= 1;  // Shift the original number right by 1
     }
 
-    return reverse_num << 14;
+    return reversed;
 }
 
 void bin(uint8_t n) {
@@ -117,28 +118,45 @@ int main() {
     }
 
     uint32_t buffer[TRANSFER_RUNS*TRANSFER_LEN]={0};
-
+    int index = 0;
     for (int i = 0; i < TRANSFER_RUNS; i++) {
-        for (int j = 0; j < TRANSFER_LEN; j++)
-        {
-            // 在写入buffer的时候，反转buffer中的每一个32bits,中的前18bits，18bits之后的不变
-            buffer[i*TRANSFER_LEN+j] = frames[i][j];
+        for (int j = 0; j < TRANSFER_LEN; j++) {
+            // // 只读奇数列
+            // if (j % 2 == 0 && j <= 251) {
+            //     buffer[index++] = frames[i][j];
+            // }
+            if (frames[i][j] != 0) {
+                buffer[index] = frames[i][j];
+                index++;
+            }
         }
     }
-
+    printf("index: %d\n", index);
     // //反转buffer
-    // for (int i = 0; i < TRANSFER_RUNS; i++) {
-    //     for (int j = 0; j < TRANSFER_LEN; j++)
-    //     {
-    //         buffer[i*TRANSFER_LEN+j] = reverseBits(buffer[i*TRANSFER_LEN+j]);
-    //         // print frame
-    //         printf("frame[%d][%d]: %02x\n", i, j, frames[i][j]);
-    //         printf("buffer[%d]: %02x\n", i, buffer[i*TRANSFER_LEN+j]);
-    //     }
+    uint32_t re_buffer[TRANSFER_RUNS*TRANSFER_LEN]={0};
+    int re_index = 0;
+    for (int i = 0; i < index; i++) {
+        re_buffer[re_index] = reverseBits(buffer[i]);
+        //printf("rbuff[%d]: %08x, re_buffer[%d]: %08x\n", i, buffer[i], re_index, re_buffer[re_index]);
+        re_index++;
+    }
+
+    // // 将32bit转为24bit，取高24bit
+    // uint32_t re_buffer_24[]={0};
+    // int re_index_24 = 0;
+    // for (int i = 0; i < index; i++) {
+    //     re_buffer_24[re_index_24++] = re_buffer[i] & ((1<<24)-1);
     // }
 
-    write_wav("/home/root/m3/test.wav",TRANSFER_RUNS*TRANSFER_LEN, buffer, SAMPLE_RATE);
 
+    write_wav("/home/root/m3/test.wav", index, re_buffer, SAMPLE_RATE, index);
+
+    printf("Finished audio_i2s_recv\n");
+    printf("=============================================================");
+    printf("=============================================================");
+    printf("=============================================================");
+    printf("=============================================================");
+    printf("=============================================================");
 
     audio_i2s_release(&my_config);
 

@@ -6,7 +6,7 @@
 #include <stdio.h>
 
 #define NUM_CHANNELS 1
-#define BPS 24
+#define BPS 32
 #define SAMPLE_RATE 44100
 
 // Define the WAV file header structure
@@ -52,6 +52,6 @@ void write_wav_header(FILE *wav_file, uint32_t sample_rate, uint32_t num_samples
  * @param data The audio data.
  * @param sample_rate The sample rate of the audio.
  */
-void write_wav(const char *filename, unsigned long num_samples, uint32_t *data, uint32_t sample_rate);
+void write_wav(const char *filename, unsigned long num_samples, uint32_t *data, uint32_t sample_rate, int index);
 
 #endif // WAV_H

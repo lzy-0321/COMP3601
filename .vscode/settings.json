@@ -2,6 +2,7 @@
     "files.associations": {
         "*.java": "java",
         "wav.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "random": "c"
     }
 }
