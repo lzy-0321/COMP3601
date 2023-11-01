@@ -35,9 +35,9 @@
 
 /**
  * @brief Initalize the I2S audio interface. Mmaps the physical address.
- * 
- * @param config 
- * @return int 
+ *
+ * @param config
+ * @return int
  */
 int audio_i2s_init(audio_i2s_t *config) {
     int32_t ret = axi_dma_init(&config->s2mm, AXI_DMA_S2MM_PADDR, AXI_DMA_RECV_BUFFER_PADDR, AXI_DMA_RECV_BUFFER_SIZE);
@@ -45,7 +45,7 @@ int audio_i2s_init(audio_i2s_t *config) {
         return ret;
     }
     memset(config->s2mm.v_dst_addr, 0, AXI_DMA_RECV_BUFFER_SIZE);
-    
+
     int32_t dev_fd = open("/dev/mem", O_RDWR | O_SYNC);
     if (dev_fd < 0) {
         axi_dma_release(&config->s2mm);
