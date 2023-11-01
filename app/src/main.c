@@ -21,24 +21,24 @@
  * SOFTWARE.
  */
 
+
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
-
 #include "audio_i2s.h"
 
 
 
 #define TRANSFER_RUNS 2000
-
 #define NUM_CHANNELS 1
-#define BPS 32
+// Change BPS to 32, origionally 24. Defined by HW
+#define BPS 32 
 #define SAMPLE_RATE 44100
 #define RECORD_DURATION 10
 
 
-char temp;
-//Write header file
+// self-defined wav header struct
+
 typedef struct {
     char chunkId[4];
     uint32_t chunkSize;
@@ -55,10 +55,9 @@ typedef struct {
     uint32_t subchunk2Size;
 } WavHeader;
 
-
-void write_wav(const char* file, uint32_t* data, uint32_t numSamples, uint32_t sampleRate, int k) {
+//header
+void write_wav(const char* file, uint32_t* data, uint32_t numSamples, uint32_t sampleRate) {
     WavHeader header;
-
     memcpy(header.chunkId, "RIFF", 4);
     header.chunkSize = 36 + (numSamples * sizeof(uint32_t));
     memcpy(header.format, "WAVE", 4);
@@ -68,8 +67,8 @@ void write_wav(const char* file, uint32_t* data, uint32_t numSamples, uint32_t s
     header.numChannels = NUM_CHANNELS;
     header.sampleRate = sampleRate;
     header.byteRate = sampleRate * NUM_CHANNELS * (BPS / 8);
-    header.blockAlign = sampleRate * NUM_CHANNELS * BPS / 8 ; //6
-    header.bitsPerSample = BPS; //BPS
+    header.blockAlign = sampleRate * NUM_CHANNELS * BPS / 8 ; 
+    header.bitsPerSample = BPS; 
     memcpy(header.subchunk2Id, "data", 4);
     header.subchunk2Size = numSamples * BPS / 8;
 
@@ -81,17 +80,17 @@ void write_wav(const char* file, uint32_t* data, uint32_t numSamples, uint32_t s
 
     fwrite(&header, sizeof(WavHeader), 1, Wavfile);
     fwrite(data, sizeof(uint32_t), numSamples, Wavfile);
-    // for (int counter = 0; counter < k; counter++){
-    //     printf("Writing %08x\n", data[counter]);
-    //     fwrite(&data[counter], sizeof(uint32_t), 1, Wavfile);
-    // }
-    
     fclose(Wavfile);
 }
 
 
 
-
+/* 
+In hardware design, we bump bits by bits from MSB to LSB, 
+that makes the MSB to be the 18th bit and LBS to be the 1th 
+bit so the datas in each lines are in opposite direction, 
+we need to reverse each line so it make the right order. 
+*/
 uint32_t reverseBits(uint32_t num) {
     uint32_t reversed = 0;
     int i;
@@ -104,22 +103,6 @@ uint32_t reverseBits(uint32_t num) {
 
     return reversed;
 }
-
-
-// uint32_t shiftLast18ToFrontAndClearLast14(uint32_t num) {
-//     uint32_t last18 = num & ((1 << 18) - 1);  // Extract the last 18 bits
-//     uint32_t remaining = num >> 18;  // Get the remaining bits after the last 18 bits
-//     uint32_t combined = (last18 << (32 - 18)) | remaining;  // Shift the last 18 bits to the front and OR with the remaining bits
-//     uint32_t clearLast14Mask = ~((1 << 14) - 1);  // Create a mask to clear the last 14 bits
-//     return combined & clearLast14Mask;  // AND the combined number with the mask to clear the last 14 bits
-// }
-
-
-
-
-
-
-
 
 
 
@@ -192,6 +175,10 @@ int main() {
         parsemem(frames[i], TRANSFER_LEN);
         printf("==============================\n");
     }
+    /*
+    Create a temporary buffer to store the reversed data.
+    Be prepared to store the reversed data in the buffer.
+    */
 
     uint32_t buffer[TRANSFER_RUNS * TRANSFER_LEN] = {0};
     uint32_t cache[TRANSFER_RUNS * TRANSFER_LEN] = {0};
@@ -203,15 +190,17 @@ int main() {
             }
         }
     }
-    printf("k = %d\n", k);
+    //Reverse cache and store in buffer
     int counter;
     for ( counter = 0; counter < k; counter++){
         buffer[counter] = reverseBits(cache[counter]) ;
-        printf("buffer[%d]: %08x, rcache[%d]: %08x\n", counter, buffer[counter], counter, cache[counter]);
+        //Thie line below is for debugging purpose, its for showing if we need to shift the datas after 
+        //reversing them. This line is also kept for demo purpose.
+        //printf("buffer[%d]: %08x, rcache[%d]: %08x\n", counter, buffer[counter], counter, cache[counter]);
     }
-
+    //Write to test.wav
     const char* outputAudio = "/lib/firmware/xilinx/i2s-master/test.wav";
-    write_wav(outputAudio, buffer,k,SAMPLE_RATE, k);
+    write_wav(outputAudio, buffer,k,SAMPLE_RATE);
 
 
     audio_i2s_release(&my_config);
