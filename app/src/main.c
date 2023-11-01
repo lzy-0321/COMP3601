@@ -31,8 +31,8 @@
 
 #define TRANSFER_RUNS 2000
 
-#define NUM_CHANNELS 2
-#define BPS 24
+#define NUM_CHANNELS 1
+#define BPS 32
 #define SAMPLE_RATE 44100
 #define RECORD_DURATION 10
 
@@ -56,22 +56,22 @@ typedef struct {
 } WavHeader;
 
 
-void write_wav(const char* file, uint32_t* data, uint32_t numSamples, uint32_t sampleRate) {
+void write_wav(const char* file, uint32_t* data, uint32_t numSamples, uint32_t sampleRate, int k) {
     WavHeader header;
 
     memcpy(header.chunkId, "RIFF", 4);
-    header.chunkSize = 36 + (numSamples * 4);
+    header.chunkSize = 36 + (numSamples * sizeof(uint32_t));
     memcpy(header.format, "WAVE", 4);
     memcpy(header.subchunk1Id, "fmt ", 4);
     header.subchunk1Size = 16;
     header.audioFormat = 1;
-    header.numChannels = 1;
+    header.numChannels = NUM_CHANNELS;
     header.sampleRate = sampleRate;
-    header.byteRate = 264600;
-    header.blockAlign = 6;
-    header.bitsPerSample = BPS;
+    header.byteRate = sampleRate * NUM_CHANNELS * (BPS / 8);
+    header.blockAlign = sampleRate * NUM_CHANNELS * BPS / 8 ; //6
+    header.bitsPerSample = BPS; //BPS
     memcpy(header.subchunk2Id, "data", 4);
-    header.subchunk2Size = numSamples * 4;
+    header.subchunk2Size = numSamples * BPS / 8;
 
     FILE* Wavfile = fopen(file, "wb");
     if (Wavfile == NULL) {
@@ -81,6 +81,11 @@ void write_wav(const char* file, uint32_t* data, uint32_t numSamples, uint32_t s
 
     fwrite(&header, sizeof(WavHeader), 1, Wavfile);
     fwrite(data, sizeof(uint32_t), numSamples, Wavfile);
+    // for (int counter = 0; counter < k; counter++){
+    //     printf("Writing %08x\n", data[counter]);
+    //     fwrite(&data[counter], sizeof(uint32_t), 1, Wavfile);
+    // }
+    
     fclose(Wavfile);
 }
 
@@ -101,13 +106,13 @@ uint32_t reverseBits(uint32_t num) {
 }
 
 
-uint32_t shiftLast18ToFrontAndClearLast14(uint32_t num) {
-    uint32_t last18 = num & ((1 << 18) - 1);  // Extract the last 18 bits
-    uint32_t remaining = num >> 18;  // Get the remaining bits after the last 18 bits
-    uint32_t combined = (last18 << (32 - 18)) | remaining;  // Shift the last 18 bits to the front and OR with the remaining bits
-    uint32_t clearLast14Mask = ~((1 << 14) - 1);  // Create a mask to clear the last 14 bits
-    return combined & clearLast14Mask;  // AND the combined number with the mask to clear the last 14 bits
-}
+// uint32_t shiftLast18ToFrontAndClearLast14(uint32_t num) {
+//     uint32_t last18 = num & ((1 << 18) - 1);  // Extract the last 18 bits
+//     uint32_t remaining = num >> 18;  // Get the remaining bits after the last 18 bits
+//     uint32_t combined = (last18 << (32 - 18)) | remaining;  // Shift the last 18 bits to the front and OR with the remaining bits
+//     uint32_t clearLast14Mask = ~((1 << 14) - 1);  // Create a mask to clear the last 14 bits
+//     return combined & clearLast14Mask;  // AND the combined number with the mask to clear the last 14 bits
+// }
 
 
 
@@ -193,19 +198,20 @@ int main() {
     int i, j, k = 0;
     for (i = 0; i < TRANSFER_RUNS; i++) {
         for (j = 0; j < TRANSFER_LEN; j++) {
-
-            cache[k++] = (int32_t)frames[i][j];
-            //&0x0003ffff <<14)
-
+            if(frames[i][j] != 0 ){
+                cache[k++] = frames[i][j];
+            }
         }
     }
+    printf("k = %d\n", k);
     int counter;
-    for ( counter = 0; counter < TRANSFER_LEN * TRANSFER_RUNS; counter++){
-        buffer[counter] = shiftLast18ToFrontAndClearLast14(reverseBits(cache[counter])) ;
+    for ( counter = 0; counter < k; counter++){
+        buffer[counter] = reverseBits(cache[counter]) ;
+        printf("buffer[%d]: %08x, rcache[%d]: %08x\n", counter, buffer[counter], counter, cache[counter]);
     }
 
     const char* outputAudio = "/lib/firmware/xilinx/i2s-master/test.wav";
-    write_wav(outputAudio,buffer,TRANSFER_RUNS*TRANSFER_LEN,  SAMPLE_RATE);
+    write_wav(outputAudio, buffer,k,SAMPLE_RATE, k);
 
 
     audio_i2s_release(&my_config);
