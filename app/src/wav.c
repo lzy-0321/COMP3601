@@ -68,13 +68,8 @@ void write_wav(const char *filename, unsigned long num_samples, uint32_t *data, 
 
     for (int i=0; i < index; i++)
     {
-        printf("Writing %08x\n", data[i]);
+        //printf("Writing %08x\n", data[i]);
         fwrite(&data[i], sizeof(uint32_t), 1, wav_file);
     }
-
-    // for (int i=0; i < num_samples; i++)
-    // {
-    //     write_little_endian((unsigned int)(data[i]), 4, wav_file);
-    // }
     fclose(wav_file);
 }
