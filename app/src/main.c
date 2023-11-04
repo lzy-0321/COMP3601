@@ -29,7 +29,7 @@
 #include "../include/wav.h"
 
 
-#define TRANSFER_RUNS 1000
+#define TRANSFER_RUNS 2500
 #define RECORD_DURATION 10
 
 
@@ -140,14 +140,6 @@ int main() {
         //printf("rbuff[%d]: %08x, re_buffer[%d]: %08x\n", i, buffer[i], re_index, re_buffer[re_index]);
         re_index++;
     }
-
-    // // 将32bit转为24bit，取高24bit
-    // uint32_t re_buffer_24[]={0};
-    // int re_index_24 = 0;
-    // for (int i = 0; i < index; i++) {
-    //     re_buffer_24[re_index_24++] = re_buffer[i] & ((1<<24)-1);
-    // }
-
 
     write_wav("/home/root/m3/test.wav", index, re_buffer, SAMPLE_RATE, index);
 
