@@ -5,7 +5,7 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#define NUM_CHANNELS 1
+#define NUM_CHANNELS 2
 #define BPS 32
 #define SAMPLE_RATE 44100
 
