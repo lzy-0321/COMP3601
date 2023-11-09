@@ -26,6 +26,11 @@
 #include <string.h>
 #include <stdint.h>
 #include "audio_i2s.h"
+#include <stdlib.h>
+#include <unistd.h>
+#include <arpa/inet.h>
+#include <sys/socket.h>
+#include <alsa/asoundlib.h>
 
 
 
@@ -35,6 +40,8 @@
 #define BPS 32 
 #define SAMPLE_RATE 44100
 #define RECORD_DURATION 10
+#define PORT 12345
+//#define BUFFER_SIZE 1024
 
 
 // self-defined wav header struct
@@ -103,6 +110,8 @@ uint32_t reverseBits(uint32_t num) {
 
     return reversed;
 }
+
+
 
 
 
@@ -201,6 +210,44 @@ int main() {
     //Write to test.wav
     const char* outputAudio = "/lib/firmware/xilinx/i2s-master/test.wav";
     write_wav(outputAudio, buffer,k,SAMPLE_RATE);
+
+
+
+    //streaming wav file
+
+    int server_socket, client_socket;
+    struct sockaddr_in server_addr, client_addr;
+    socklen_t client_addr_size;
+
+    server_socket = socket(AF_INET, SOCK_STREAM, 0);
+
+    memset(&server_addr, 0, sizeof(server_addr));
+    server_addr.sin_family = AF_INET;
+    server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+    server_addr.sin_port = htons(PORT);
+
+    bind(server_socket, (struct sockaddr*)&server_addr, sizeof(server_addr));
+    listen(server_socket, 5);
+
+    client_addr_size = sizeof(client_addr);
+    client_socket = accept(server_socket, (struct sockaddr*)&client_addr, &client_addr_size);
+
+
+    FILE* file = fopen("/lib/firmware/xilinx/i2s-master/test.wav", "rb");
+    char buffer2[TRANSFER_RUNS * TRANSFER_LEN];
+    size_t bytes_read;
+
+    // Skipping WAV header
+    //fseek(file, 44, SEEK_SET);
+
+    while ((bytes_read = fread(buffer2, 1, TRANSFER_RUNS * TRANSFER_LEN, file)) != 0) {
+        send(client_socket, buffer2, bytes_read, 0);
+    }
+    
+    fclose(file);
+
+    close(client_socket);
+    close(server_socket);
 
 
     audio_i2s_release(&my_config);
