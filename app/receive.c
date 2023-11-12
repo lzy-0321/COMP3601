@@ -5,7 +5,7 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 
-#define SERVER_IP "192.168.137.136"
+#define SERVER_IP "192.168.137.35"
 #define PORT 12345
 #define BUFFER_SIZE 51200
 

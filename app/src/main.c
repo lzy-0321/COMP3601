@@ -90,7 +90,43 @@ void write_wav(const char* file, uint32_t* data, uint32_t numSamples, uint32_t s
     fclose(Wavfile);
 }
 
+//streaming
+void stream_wav() {
+     int server_socket, client_socket;
+    struct sockaddr_in server_addr, client_addr;
+    socklen_t client_addr_size;
 
+    server_socket = socket(AF_INET, SOCK_STREAM, 0);
+
+    memset(&server_addr, 0, sizeof(server_addr));
+    server_addr.sin_family = AF_INET;
+    server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+    server_addr.sin_port = htons(PORT);
+
+    bind(server_socket, (struct sockaddr*)&server_addr, sizeof(server_addr));
+    listen(server_socket, 5);
+
+    client_addr_size = sizeof(client_addr);
+    client_socket = accept(server_socket, (struct sockaddr*)&client_addr, &client_addr_size);
+
+
+    FILE* file = fopen("/lib/firmware/xilinx/i2s-master/test.wav", "rb");
+    char buffer2[TRANSFER_RUNS * TRANSFER_LEN];
+    size_t bytes_read;
+
+    while ((bytes_read = fread(buffer2, 1, TRANSFER_RUNS * TRANSFER_LEN, file)) != 0) {
+        send(client_socket, buffer2, bytes_read, 0);
+    }
+    
+    fclose(file);
+
+    close(client_socket);
+    close(server_socket);
+    printf("File streamed successfully!\n");
+
+
+
+}
 
 /* 
 In hardware design, we bump bits by bits from MSB to LSB, 
@@ -213,42 +249,43 @@ int main() {
 
 
 
+
+
     //streaming wav file
 
-    int server_socket, client_socket;
-    struct sockaddr_in server_addr, client_addr;
-    socklen_t client_addr_size;
+    // int server_socket, client_socket;
+    // struct sockaddr_in server_addr, client_addr;
+    // socklen_t client_addr_size;
 
-    server_socket = socket(AF_INET, SOCK_STREAM, 0);
+    // server_socket = socket(AF_INET, SOCK_STREAM, 0);
 
-    memset(&server_addr, 0, sizeof(server_addr));
-    server_addr.sin_family = AF_INET;
-    server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
-    server_addr.sin_port = htons(PORT);
+    // memset(&server_addr, 0, sizeof(server_addr));
+    // server_addr.sin_family = AF_INET;
+    // server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+    // server_addr.sin_port = htons(PORT);
 
-    bind(server_socket, (struct sockaddr*)&server_addr, sizeof(server_addr));
-    listen(server_socket, 5);
+    // bind(server_socket, (struct sockaddr*)&server_addr, sizeof(server_addr));
+    // listen(server_socket, 5);
 
-    client_addr_size = sizeof(client_addr);
-    client_socket = accept(server_socket, (struct sockaddr*)&client_addr, &client_addr_size);
+    // client_addr_size = sizeof(client_addr);
+    // client_socket = accept(server_socket, (struct sockaddr*)&client_addr, &client_addr_size);
 
 
-    FILE* file = fopen("/lib/firmware/xilinx/i2s-master/test.wav", "rb");
-    char buffer2[TRANSFER_RUNS * TRANSFER_LEN];
-    size_t bytes_read;
+    // FILE* file = fopen("/lib/firmware/xilinx/i2s-master/test.wav", "rb");
+    // char buffer2[TRANSFER_RUNS * TRANSFER_LEN];
+    // size_t bytes_read;
 
-    // Skipping WAV header
-    //fseek(file, 44, SEEK_SET);
-
-    while ((bytes_read = fread(buffer2, 1, TRANSFER_RUNS * TRANSFER_LEN, file)) != 0) {
-        send(client_socket, buffer2, bytes_read, 0);
-    }
+    // while ((bytes_read = fread(buffer2, 1, TRANSFER_RUNS * TRANSFER_LEN, file)) != 0) {
+    //     send(client_socket, buffer2, bytes_read, 0);
+    // }
     
-    fclose(file);
+    // fclose(file);
 
-    close(client_socket);
-    close(server_socket);
+    // close(client_socket);
+    // close(server_socket);
+    // printf("File streamed successfully!\n");
 
+    stream_wav();
 
     audio_i2s_release(&my_config);
 
