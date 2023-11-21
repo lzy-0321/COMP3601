@@ -29,7 +29,7 @@
 #include "../include/wav.h"
 
 
-#define TRANSFER_RUNS 2500
+#define TRANSFER_RUNS 800
 #define RECORD_DURATION 10
 
 
@@ -141,7 +141,7 @@ int main() {
         re_index++;
     }
 
-    write_wav("/home/root/m3/test.wav", index, re_buffer, SAMPLE_RATE, index);
+    write_wav("/home/root/m4/command.wav", index, re_buffer, SAMPLE_RATE, index);
 
     printf("Finished audio_i2s_recv\n");
     printf("=============================================================");
@@ -154,5 +154,3 @@ int main() {
 
     return 0;
 }
-
-
