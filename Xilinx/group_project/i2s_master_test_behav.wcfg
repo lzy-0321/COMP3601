@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="i2s_master_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="aud_param" />
+            <top_module name="glbl" />
+            <top_module name="i2s_master_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="12.570001 us"></ZoomEndTime>
+      <Cursor1Time time="7.410000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="132"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wave_markers>
+      <marker time="0" label="" />
+   </wave_markers>
+   <wvobject fp_name="/i2s_master_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_master_tb/clk_1" type="logic">
+      <obj_property name="ElementShortName">clk_1</obj_property>
+      <obj_property name="ObjectShortName">clk_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_master_tb/i2s_dout" type="logic">
+      <obj_property name="ElementShortName">i2s_dout</obj_property>
+      <obj_property name="ObjectShortName">i2s_dout</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_master_tb/i2s_lrcl" type="logic">
+      <obj_property name="ElementShortName">i2s_lrcl</obj_property>
+      <obj_property name="ObjectShortName">i2s_lrcl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_master_tb/i2s_bclk" type="logic">
+      <obj_property name="ElementShortName">i2s_bclk</obj_property>
+      <obj_property name="ObjectShortName">i2s_bclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_master_tb/uut/bit_count" type="other">
+      <obj_property name="ElementShortName">bit_count</obj_property>
+      <obj_property name="ObjectShortName">bit_count</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_master_tb/uut/fsm_count" type="other">
+      <obj_property name="ElementShortName">fsm_count</obj_property>
+      <obj_property name="ObjectShortName">fsm_count</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_master_tb/uut/i2s_dout" type="logic">
+      <obj_property name="ElementShortName">i2s_dout</obj_property>
+      <obj_property name="ObjectShortName">i2s_dout</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_master_tb/uut/data_state" type="other">
+      <obj_property name="ElementShortName">data_state</obj_property>
+      <obj_property name="ObjectShortName">data_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_master_tb/uut/data_source" type="array">
+      <obj_property name="ElementShortName">data_source[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_source[31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_master_tb/uut/fsm_count" type="other">
+      <obj_property name="ElementShortName">fsm_count</obj_property>
+      <obj_property name="ObjectShortName">fsm_count</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_master_tb/uut/fifo_state" type="other">
+      <obj_property name="ElementShortName">fifo_state</obj_property>
+      <obj_property name="ObjectShortName">fifo_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_master_tb/uut/fifo_din" type="array">
+      <obj_property name="ElementShortName">fifo_din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_din[31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_master_tb/uut/w_stb" type="logic">
+      <obj_property name="ElementShortName">w_stb</obj_property>
+      <obj_property name="ObjectShortName">w_stb</obj_property>
+   </wvobject>
+</wave_config>

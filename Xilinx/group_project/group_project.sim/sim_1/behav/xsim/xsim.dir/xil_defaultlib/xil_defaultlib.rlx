@@ -1,0 +1,9 @@
+0.7
+2020.2
+Oct 19 2021
+03:16:22
+C:/Users/Mando/Documents/projects/ProjectFile/hdl/i2s_master.vhd,1698771175,vhdl,,,,i2s_master,,,,,,,,
+C:/Users/Mando/Documents/projects/ProjectFile/hdl/params.vhd,1698683340,vhdl,C:/Users/Mando/Documents/projects/ProjectFile/hdl/i2s_master.vhd,,,aud_param,,,,,,,,
+C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim/glbl.v,1698719362,verilog,,,,glbl,,axi_vip_v1_1_11;smartconnect_v1_0;xilinx_vip;zynq_ultra_ps_e_vip_v1_0_11,,,,,,
+C:/Users/Mando/Documents/projects/group_project/group_project.srcs/sim_1/new/i2s_master_test.v,1698766308,vhdl,,,,i2s_master_tb,,,,,,,,
+C:/Users/Mando/Documents/projects/group_project/group_project.srcs/sim_1/new/i2s_master_test.vhd,1698763623,vhdl,,,,i2s_master_test,,,,,,,,

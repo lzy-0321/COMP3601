@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Wed Oct 25 16:19:05 2023
+# Process ID: 52272
+# Current directory: C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_rst_ps8_0_99M_0_synth_1
+# Command line: vivado.exe -log design_1_rst_ps8_0_99M_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_rst_ps8_0_99M_0.tcl
+# Log file: C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_rst_ps8_0_99M_0_synth_1/design_1_rst_ps8_0_99M_0.vds
+# Journal file: C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_rst_ps8_0_99M_0_synth_1\vivado.jou
+# Running On: Ziyao-DESKTOP, OS: Windows, CPU Frequency: 3418 MHz, CPU Physical cores: 16, Host memory: 68469 MB
+#-----------------------------------------------------------
+source design_1_rst_ps8_0_99M_0.tcl -notrace

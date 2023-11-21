@@ -1,0 +1,1736 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue Oct 31 23:09:58 2023
+# Process ID: 56244
+# Current directory: C:/Users/Mando/Documents/projects/group_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent37608 C:\Users\Mando\Documents\projects\group_project\group_project.xpr
+# Log file: C:/Users/Mando/Documents/projects/group_project/vivado.log
+# Journal file: C:/Users/Mando/Documents/projects/group_project\vivado.jou
+# Running On: Ziyao-DESKTOP, OS: Windows, CPU Frequency: 3418 MHz, CPU Physical cores: 16, Host memory: 68469 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Mando/Documents/projects/group_project/group_project.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.3 available at D:/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.3/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.3 available at D:/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.3/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at D:/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld_es:part0:1.0 available at D:/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/es/1.0/board.xml as part xczu58dr-fsvg1517-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld_es:part0:1.0 available at D:/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/es/1.0/board.xml as part xczu59dr-ffvf1760-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:1.0 available at D:/xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/1.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [Project 1-313] Project file moved from 'C:/Users/cse/Downloads/project-main/project-main/group_project' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/cse/Downloads/project-main/project-main/group_project/group_project.srcs/utils_1/imports/design_1_rst_ps8_0_99M_0_synth_1' of run 'design_1_rst_ps8_0_99M_0_synth_1' is not writable, setting it to default location 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/design_1_rst_ps8_0_99M_0_synth_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/cse/Downloads/project-main/project-main/group_project/group_project.srcs/utils_1/imports/design_1_axi_dma_0_0_synth_1' of run 'design_1_axi_dma_0_0_synth_1' is not writable, setting it to default location 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/design_1_axi_dma_0_0_synth_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/cse/Downloads/project-main/project-main/group_project/group_project.srcs/utils_1/imports/design_1_zynq_ultra_ps_e_0_0_synth_1' of run 'design_1_zynq_ultra_ps_e_0_0_synth_1' is not writable, setting it to default location 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/design_1_zynq_ultra_ps_e_0_0_synth_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/cse/Downloads/project-main/project-main/group_project/group_project.srcs/utils_1/imports/design_1_xbar_0_synth_1' of run 'design_1_xbar_0_synth_1' is not writable, setting it to default location 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/design_1_xbar_0_synth_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/cse/Downloads/project-main/project-main/group_project/group_project.srcs/utils_1/imports/design_1_clk_wiz_0_0_synth_1' of run 'design_1_clk_wiz_0_0_synth_1' is not writable, setting it to default location 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/design_1_clk_wiz_0_0_synth_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/cse/Downloads/project-main/project-main/group_project/group_project.srcs/utils_1/imports/design_1_audio_pipeline_0_0_synth_1' of run 'design_1_audio_pipeline_0_0_synth_1' is not writable, setting it to default location 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/design_1_audio_pipeline_0_0_synth_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/cse/Downloads/project-main/project-main/group_project/group_project.srcs/utils_1/imports/impl_1' of run 'impl_1' is not writable, setting it to default location 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/impl_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/cse/Downloads/project-main/project-main/group_project/group_project.srcs/utils_1/imports/design_1_rst_ps8_0_99M_0_impl_1' of run 'design_1_rst_ps8_0_99M_0_impl_1' is not writable, setting it to default location 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/design_1_rst_ps8_0_99M_0_impl_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/cse/Downloads/project-main/project-main/group_project/group_project.srcs/utils_1/imports/design_1_axi_dma_0_0_impl_1' of run 'design_1_axi_dma_0_0_impl_1' is not writable, setting it to default location 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/design_1_axi_dma_0_0_impl_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/cse/Downloads/project-main/project-main/group_project/group_project.srcs/utils_1/imports/design_1_zynq_ultra_ps_e_0_0_impl_1' of run 'design_1_zynq_ultra_ps_e_0_0_impl_1' is not writable, setting it to default location 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/design_1_zynq_ultra_ps_e_0_0_impl_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/cse/Downloads/project-main/project-main/group_project/group_project.srcs/utils_1/imports/design_1_xbar_0_impl_1' of run 'design_1_xbar_0_impl_1' is not writable, setting it to default location 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/design_1_xbar_0_impl_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/cse/Downloads/project-main/project-main/group_project/group_project.srcs/utils_1/imports/design_1_clk_wiz_0_0_impl_1' of run 'design_1_clk_wiz_0_0_impl_1' is not writable, setting it to default location 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/design_1_clk_wiz_0_0_impl_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/cse/Downloads/project-main/project-main/group_project/group_project.srcs/utils_1/imports/design_1_audio_pipeline_0_0_impl_1' of run 'design_1_audio_pipeline_0_0_impl_1' is not writable, setting it to default location 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/design_1_audio_pipeline_0_0_impl_1'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xilinx/Vivado/2021.2/data/ip'.
+open_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1595.348 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2021.2
+  **** Build date : Oct 19 2021 at 03:13:30
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2021.2.0
+  ****** Build date   : Sep 28 2021-07:44:20
+    **** Build number : 2021.2.1632779060
+      ** Copyright 2017-2023 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1595.348 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/XFL13PVQKV4DA
+set_property PROGRAM.FILE {C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xck26_0]
+current_hw_device [get_hw_devices xck26_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xck26_0] 0]
+INFO: [Labtools 27-1434] Device xck26 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+current_hw_device [get_hw_devices arm_dap_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices arm_dap_1] 0]
+current_hw_device [get_hw_devices xck26_0]
+set_property PROBES.FILE {} [get_hw_devices xck26_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xck26_0]
+set_property PROGRAM.FILE {C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xck26_0]
+program_hw_devices [get_hw_devices xck26_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xck26_0] 0]
+INFO: [Labtools 27-1434] Device xck26 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_module_reference design_1_audio_pipeline_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'axis'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+WARNING: [IP_Flow 19-5661] Bus Interface 's00_axi_aclk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Reading block design file <C:/Users/Mando/Documents/projects/group_project/group_project.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps8_0_99M
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:module_ref:audio_pipeline:1.0 - audio_pipeline_0
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_HIGH from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_S2MM.
+Successfully read diagram <design_1> from block design file <C:/Users/Mando/Documents/projects/group_project/group_project.srcs/sources_1/bd/design_1/design_1.bd>
+Upgrading 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1
+
+INFO: [IP_Flow 19-3420] Updated design_1_audio_pipeline_0_0 to use current project options
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+upgrade_ip: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 3672.223 ; gain = 310.680
+update_module_reference: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 3672.223 ; gain = 311.777
+reset_run synth_1
+INFO: [Project 1-1160] Copying file C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+WARNING: [filemgmt 56-12] File 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [Project 1-1859] Fail to add auto incremental checkpoint C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to utils_1 fileset.
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block audio_pipeline_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 0cd60326363d5586; cache size = 157.529 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a04fe04941712846; cache size = 157.529 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_0, cache-ID = d55ca97953529195; cache size = 157.529 MB.
+[Tue Oct 31 23:14:43 2023] Launched design_1_audio_pipeline_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_audio_pipeline_0_0_synth_1: C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1/runme.log
+synth_1: C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/runme.log
+[Tue Oct 31 23:14:43 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 3950.141 ; gain = 264.238
+update_module_reference design_1_audio_pipeline_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'axis'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+WARNING: [IP_Flow 19-5661] Bus Interface 's00_axi_aclk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1
+
+INFO: [IP_Flow 19-3420] Updated design_1_audio_pipeline_0_0 to use current project options
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block audio_pipeline_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 0cd60326363d5586; cache size = 157.529 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a04fe04941712846; cache size = 157.529 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_0, cache-ID = d55ca97953529195; cache size = 157.529 MB.
+[Tue Oct 31 23:16:58 2023] Launched design_1_audio_pipeline_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_audio_pipeline_0_0_synth_1: C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1/runme.log
+synth_1: C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/runme.log
+[Tue Oct 31 23:16:58 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:21 . Memory (MB): peak = 4010.586 ; gain = 3.777
+set_property PROBES.FILE {} [get_hw_devices xck26_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xck26_0]
+set_property PROGRAM.FILE {C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xck26_0]
+program_hw_devices [get_hw_devices xck26_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xck26_0] 0]
+INFO: [Labtools 27-1434] Device xck26 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_module_reference design_1_audio_pipeline_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'axis'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+WARNING: [IP_Flow 19-5661] Bus Interface 's00_axi_aclk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1
+
+INFO: [IP_Flow 19-3420] Updated design_1_audio_pipeline_0_0 to use current project options
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+reset_run synth_1
+INFO: [Project 1-1160] Copying file C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+WARNING: [filemgmt 56-12] File 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [Project 1-1859] Fail to add auto incremental checkpoint C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to utils_1 fileset.
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block audio_pipeline_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 0cd60326363d5586; cache size = 159.962 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a04fe04941712846; cache size = 159.962 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_0, cache-ID = d55ca97953529195; cache size = 159.962 MB.
+[Tue Oct 31 23:21:45 2023] Launched design_1_audio_pipeline_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_audio_pipeline_0_0_synth_1: C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1/runme.log
+synth_1: C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/runme.log
+[Tue Oct 31 23:21:45 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:20 . Memory (MB): peak = 4079.582 ; gain = 21.992
+set_property PROBES.FILE {} [get_hw_devices xck26_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xck26_0]
+set_property PROGRAM.FILE {C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xck26_0]
+program_hw_devices [get_hw_devices xck26_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xck26_0] 0]
+INFO: [Labtools 27-1434] Device xck26 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_module_reference design_1_audio_pipeline_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'axis'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+WARNING: [IP_Flow 19-5661] Bus Interface 's00_axi_aclk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1
+
+INFO: [IP_Flow 19-3420] Updated design_1_audio_pipeline_0_0 to use current project options
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+reset_run synth_1
+INFO: [Project 1-1160] Copying file C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+WARNING: [filemgmt 56-12] File 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [Project 1-1859] Fail to add auto incremental checkpoint C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to utils_1 fileset.
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block audio_pipeline_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 0cd60326363d5586; cache size = 162.391 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a04fe04941712846; cache size = 162.391 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_0, cache-ID = d55ca97953529195; cache size = 162.391 MB.
+[Tue Oct 31 23:39:55 2023] Launched design_1_audio_pipeline_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_audio_pipeline_0_0_synth_1: C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1/runme.log
+synth_1: C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/runme.log
+[Tue Oct 31 23:39:55 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 4093.973 ; gain = 6.426
+set_property PROBES.FILE {} [get_hw_devices xck26_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xck26_0]
+set_property PROGRAM.FILE {C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xck26_0]
+program_hw_devices [get_hw_devices xck26_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xck26_0] 0]
+INFO: [Labtools 27-1434] Device xck26 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_module_reference design_1_audio_pipeline_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'axis'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+WARNING: [IP_Flow 19-5661] Bus Interface 's00_axi_aclk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1
+
+INFO: [IP_Flow 19-3420] Updated design_1_audio_pipeline_0_0 to use current project options
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+reset_run synth_1
+INFO: [Project 1-1160] Copying file C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+WARNING: [filemgmt 56-12] File 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [Project 1-1859] Fail to add auto incremental checkpoint C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to utils_1 fileset.
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block audio_pipeline_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_audio_pipeline_0_0, cache-ID = 8e77d199e9e0c7ec; cache size = 166.139 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 0cd60326363d5586; cache size = 166.139 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a04fe04941712846; cache size = 166.139 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_0, cache-ID = d55ca97953529195; cache size = 166.139 MB.
+[Tue Oct 31 23:46:01 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/runme.log
+[Tue Oct 31 23:46:01 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 4246.922 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xck26_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xck26_0]
+set_property PROGRAM.FILE {C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xck26_0]
+program_hw_devices [get_hw_devices xck26_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xck26_0] 0]
+INFO: [Labtools 27-1434] Device xck26 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_module_reference design_1_audio_pipeline_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'axis'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+WARNING: [IP_Flow 19-5661] Bus Interface 's00_axi_aclk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_audio_pipeline_0_0 to use current project options
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+reset_run synth_1
+INFO: [Project 1-1160] Copying file C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+WARNING: [filemgmt 56-12] File 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [Project 1-1859] Fail to add auto incremental checkpoint C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to utils_1 fileset.
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block audio_pipeline_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 0cd60326363d5586; cache size = 166.139 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a04fe04941712846; cache size = 166.139 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_0, cache-ID = d55ca97953529195; cache size = 166.139 MB.
+[Tue Oct 31 23:49:58 2023] Launched design_1_audio_pipeline_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_audio_pipeline_0_0_synth_1: C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1/runme.log
+synth_1: C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/runme.log
+[Tue Oct 31 23:49:58 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:20 . Memory (MB): peak = 4432.227 ; gain = 14.520
+update_module_reference design_1_audio_pipeline_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'axis'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+WARNING: [IP_Flow 19-5661] Bus Interface 's00_axi_aclk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1
+
+INFO: [IP_Flow 19-3420] Updated design_1_audio_pipeline_0_0 to use current project options
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block audio_pipeline_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 0cd60326363d5586; cache size = 166.139 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a04fe04941712846; cache size = 166.139 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_0, cache-ID = d55ca97953529195; cache size = 166.139 MB.
+[Tue Oct 31 23:51:46 2023] Launched design_1_audio_pipeline_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_audio_pipeline_0_0_synth_1: C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1/runme.log
+synth_1: C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/runme.log
+[Tue Oct 31 23:51:46 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:20 . Memory (MB): peak = 4451.984 ; gain = 7.434
+set_property PROBES.FILE {} [get_hw_devices xck26_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xck26_0]
+set_property PROGRAM.FILE {C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xck26_0]
+program_hw_devices [get_hw_devices xck26_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xck26_0] 0]
+INFO: [Labtools 27-1434] Device xck26 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_module_reference design_1_audio_pipeline_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'axis'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+WARNING: [IP_Flow 19-5661] Bus Interface 's00_axi_aclk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1
+
+INFO: [IP_Flow 19-3420] Updated design_1_audio_pipeline_0_0 to use current project options
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+reset_run synth_1
+INFO: [Project 1-1160] Copying file C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+WARNING: [filemgmt 56-12] File 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [Project 1-1859] Fail to add auto incremental checkpoint C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to utils_1 fileset.
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block audio_pipeline_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 0cd60326363d5586; cache size = 169.111 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a04fe04941712846; cache size = 169.111 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_0, cache-ID = d55ca97953529195; cache size = 169.111 MB.
+[Tue Oct 31 23:58:08 2023] Launched design_1_audio_pipeline_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_audio_pipeline_0_0_synth_1: C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1/runme.log
+synth_1: C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/runme.log
+[Tue Oct 31 23:58:08 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:20 . Memory (MB): peak = 4489.328 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xck26_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xck26_0]
+set_property PROGRAM.FILE {C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xck26_0]
+program_hw_devices [get_hw_devices xck26_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xck26_0] 0]
+INFO: [Labtools 27-1434] Device xck26 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xck26_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xck26_0]
+set_property PROGRAM.FILE {C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xck26_0]
+program_hw_devices [get_hw_devices xck26_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xck26_0] 0]
+INFO: [Labtools 27-1434] Device xck26 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_module_reference design_1_audio_pipeline_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'axis'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+WARNING: [IP_Flow 19-5661] Bus Interface 's00_axi_aclk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1
+
+INFO: [IP_Flow 19-3420] Updated design_1_audio_pipeline_0_0 to use current project options
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+reset_run synth_1
+INFO: [Project 1-1160] Copying file C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+WARNING: [filemgmt 56-12] File 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [Project 1-1859] Fail to add auto incremental checkpoint C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to utils_1 fileset.
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block audio_pipeline_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 0cd60326363d5586; cache size = 171.566 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a04fe04941712846; cache size = 171.566 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_0, cache-ID = d55ca97953529195; cache size = 171.566 MB.
+[Wed Nov  1 00:06:24 2023] Launched design_1_audio_pipeline_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_audio_pipeline_0_0_synth_1: C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1/runme.log
+synth_1: C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/runme.log
+[Wed Nov  1 00:06:24 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:21 . Memory (MB): peak = 4512.602 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xck26_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xck26_0]
+set_property PROGRAM.FILE {C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xck26_0]
+program_hw_devices [get_hw_devices xck26_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xck26_0] 0]
+INFO: [Labtools 27-1434] Device xck26 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2s_master_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim/sc_xtlm_design_1_axi_smc_0.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_11 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_11 -L xilinx_vip -prj i2s_master_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj i2s_master_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Mando/Documents/projects/ProjectFile/hdl/params.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Mando/Documents/projects/ProjectFile/hdl/i2s_master.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'i2s_master'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Mando/Documents/projects/group_project/group_project.srcs/sim_1/new/i2s_master_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'i2s_master_test'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.math_real
+Compiling package xil_defaultlib.aud_param
+Compiling module xil_defaultlib.glbl
+Compiling architecture behavioral of entity xil_defaultlib.i2s_master [i2s_master_default]
+Compiling architecture behavior of entity xil_defaultlib.i2s_master_test
+Built simulation snapshot i2s_master_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "i2s_master_test_behav -key {Behavioral:sim_1:Functional:i2s_master_test} -tclbatch {i2s_master_test.tcl} -protoinst "protoinst_files/bd_afc3.protoinst" -protoinst "protoinst_files/design_1.protoinst" -view {C:/Users/Mando/Documents/projects/group_project/i2s_master_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_afc3.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_afc3.protoinst for the following reason(s):
+There are no instances of module "bd_afc3" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+open_wave_config C:/Users/Mando/Documents/projects/group_project/i2s_master_test_behav.wcfg
+source i2s_master_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'i2s_master_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 4512.602 ; gain = 0.000
+run 15 ms
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2s_master_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim/sc_xtlm_design_1_axi_smc_0.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_11 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_11 -L xilinx_vip -prj i2s_master_test_vlog.prj"
+"xvhdl --incr --relax -prj i2s_master_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Mando/Documents/projects/ProjectFile/hdl/i2s_master.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'i2s_master'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_afc3.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_afc3.protoinst for the following reason(s):
+There are no instances of module "bd_afc3" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 5436.688 ; gain = 0.000
+run 15 ms
+reset_run synth_1
+INFO: [Project 1-1160] Copying file C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+WARNING: [filemgmt 56-12] File 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [Project 1-1859] Fail to add auto incremental checkpoint C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to utils_1 fileset.
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Nov  1 00:20:30 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/runme.log
+[Wed Nov  1 00:20:30 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/runme.log
+update_module_reference design_1_audio_pipeline_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'axis'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+WARNING: [IP_Flow 19-5661] Bus Interface 's00_axi_aclk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1
+
+INFO: [IP_Flow 19-3420] Updated design_1_audio_pipeline_0_0 to use current project options
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+reset_run synth_1
+INFO: [Project 1-1160] Copying file C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+WARNING: [filemgmt 56-12] File 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [Project 1-1859] Fail to add auto incremental checkpoint C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to utils_1 fileset.
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block audio_pipeline_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 0cd60326363d5586; cache size = 175.316 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a04fe04941712846; cache size = 175.316 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_0, cache-ID = d55ca97953529195; cache size = 175.316 MB.
+[Wed Nov  1 00:23:54 2023] Launched design_1_audio_pipeline_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_audio_pipeline_0_0_synth_1: C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1/runme.log
+synth_1: C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/runme.log
+[Wed Nov  1 00:23:54 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:21 . Memory (MB): peak = 5436.688 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xck26_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xck26_0]
+set_property PROGRAM.FILE {C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xck26_0]
+program_hw_devices [get_hw_devices xck26_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xck26_0] 0]
+INFO: [Labtools 27-1434] Device xck26 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xck26_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xck26_0]
+set_property PROGRAM.FILE {C:/Users/Mando/Documents/projects/group_project/group_project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xck26_0]
+program_hw_devices [get_hw_devices xck26_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xck26_0] 0]
+INFO: [Labtools 27-1434] Device xck26 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2s_master_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim/sc_xtlm_design_1_axi_smc_0.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_11 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_11 -L xilinx_vip -prj i2s_master_test_vlog.prj"
+"xvhdl --incr --relax -prj i2s_master_test_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "i2s_master_test_behav -key {Behavioral:sim_1:Functional:i2s_master_test} -tclbatch {i2s_master_test.tcl} -protoinst "protoinst_files/bd_afc3.protoinst" -protoinst "protoinst_files/design_1.protoinst" -view {C:/Users/Mando/Documents/projects/group_project/i2s_master_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_afc3.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_afc3.protoinst for the following reason(s):
+There are no instances of module "bd_afc3" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+open_wave_config C:/Users/Mando/Documents/projects/group_project/i2s_master_test_behav.wcfg
+source i2s_master_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'i2s_master_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 5436.688 ; gain = 0.000
+run 15 ms
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_11 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_11 -L xilinx_vip -prj i2s_master_test_vlog.prj"
+"xvhdl --incr --relax -prj i2s_master_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Mando/Documents/projects/ProjectFile/hdl/i2s_master.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'i2s_master'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_afc3.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_afc3.protoinst for the following reason(s):
+There are no instances of module "bd_afc3" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 5436.688 ; gain = 0.000
+run 15 ms
+save_wave_config {C:/Users/Mando/Documents/projects/group_project/i2s_master_test_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2s_master_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim/sc_xtlm_design_1_axi_smc_0.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_11 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_11 -L xilinx_vip -prj i2s_master_test_vlog.prj"
+"xvhdl --incr --relax -prj i2s_master_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Mando/Documents/projects/group_project/group_project.srcs/sim_1/new/i2s_master_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'i2s_master_test'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.math_real
+Compiling package xil_defaultlib.aud_param
+Compiling module xil_defaultlib.glbl
+Compiling architecture behavioral of entity xil_defaultlib.i2s_master [i2s_master_default]
+Compiling architecture behavior of entity xil_defaultlib.i2s_master_test
+Built simulation snapshot i2s_master_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "i2s_master_test_behav -key {Behavioral:sim_1:Functional:i2s_master_test} -tclbatch {i2s_master_test.tcl} -protoinst "protoinst_files/bd_afc3.protoinst" -protoinst "protoinst_files/design_1.protoinst" -view {C:/Users/Mando/Documents/projects/group_project/i2s_master_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_afc3.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_afc3.protoinst for the following reason(s):
+There are no instances of module "bd_afc3" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+open_wave_config C:/Users/Mando/Documents/projects/group_project/i2s_master_test_behav.wcfg
+source i2s_master_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'i2s_master_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 5436.688 ; gain = 0.000
+run 15 ms
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_11 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_11 -L xilinx_vip -prj i2s_master_test_vlog.prj"
+"xvhdl --incr --relax -prj i2s_master_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Mando/Documents/projects/ProjectFile/hdl/i2s_master.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'i2s_master'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 5436.688 ; gain = 0.000
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_afc3.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_afc3.protoinst for the following reason(s):
+There are no instances of module "bd_afc3" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 5436.688 ; gain = 0.000
+run 15 ms
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2s_master_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim/sc_xtlm_design_1_axi_smc_0.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_11 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_11 -L xilinx_vip -prj i2s_master_test_vlog.prj"
+"xvhdl --incr --relax -prj i2s_master_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Mando/Documents/projects/group_project/group_project.srcs/sim_1/new/i2s_master_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'i2s_master_test'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.math_real
+Compiling package xil_defaultlib.aud_param
+Compiling module xil_defaultlib.glbl
+Compiling architecture behavioral of entity xil_defaultlib.i2s_master [i2s_master_default]
+Compiling architecture behavior of entity xil_defaultlib.i2s_master_test
+Built simulation snapshot i2s_master_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "i2s_master_test_behav -key {Behavioral:sim_1:Functional:i2s_master_test} -tclbatch {i2s_master_test.tcl} -protoinst "protoinst_files/bd_afc3.protoinst" -protoinst "protoinst_files/design_1.protoinst" -view {C:/Users/Mando/Documents/projects/group_project/i2s_master_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_afc3.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_afc3.protoinst for the following reason(s):
+There are no instances of module "bd_afc3" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+open_wave_config C:/Users/Mando/Documents/projects/group_project/i2s_master_test_behav.wcfg
+source i2s_master_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'i2s_master_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 5436.688 ; gain = 0.000
+run 15 ms
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2s_master_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim/sc_xtlm_design_1_axi_smc_0.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_11 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_11 -L xilinx_vip -prj i2s_master_test_vlog.prj"
+"xvhdl --incr --relax -prj i2s_master_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Mando/Documents/projects/group_project/group_project.srcs/sim_1/new/i2s_master_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'i2s_master_test'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.math_real
+Compiling package xil_defaultlib.aud_param
+Compiling module xil_defaultlib.glbl
+Compiling architecture behavioral of entity xil_defaultlib.i2s_master [i2s_master_default]
+Compiling architecture behavior of entity xil_defaultlib.i2s_master_test
+Built simulation snapshot i2s_master_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "i2s_master_test_behav -key {Behavioral:sim_1:Functional:i2s_master_test} -tclbatch {i2s_master_test.tcl} -protoinst "protoinst_files/bd_afc3.protoinst" -protoinst "protoinst_files/design_1.protoinst" -view {C:/Users/Mando/Documents/projects/group_project/i2s_master_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_afc3.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_afc3.protoinst for the following reason(s):
+There are no instances of module "bd_afc3" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+open_wave_config C:/Users/Mando/Documents/projects/group_project/i2s_master_test_behav.wcfg
+source i2s_master_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'i2s_master_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 5436.688 ; gain = 0.000
+run 15 ms
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_11 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_11 -L xilinx_vip -prj i2s_master_test_vlog.prj"
+"xvhdl --incr --relax -prj i2s_master_test_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_afc3.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_afc3.protoinst for the following reason(s):
+There are no instances of module "bd_afc3" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 5436.688 ; gain = 0.000
+run 15 ms
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_11 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_11 -L xilinx_vip -prj i2s_master_test_vlog.prj"
+"xvhdl --incr --relax -prj i2s_master_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Mando/Documents/projects/ProjectFile/hdl/i2s_master.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'i2s_master'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_afc3.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_afc3.protoinst for the following reason(s):
+There are no instances of module "bd_afc3" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 5436.688 ; gain = 0.000
+run 15 ms
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_11 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_11 -L xilinx_vip -prj i2s_master_test_vlog.prj"
+"xvhdl --incr --relax -prj i2s_master_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Mando/Documents/projects/ProjectFile/hdl/i2s_master.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'i2s_master'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_afc3.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_afc3.protoinst for the following reason(s):
+There are no instances of module "bd_afc3" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 5678.922 ; gain = 0.000
+run 15 ms
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_11 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_11 -L xilinx_vip -prj i2s_master_test_vlog.prj"
+"xvhdl --incr --relax -prj i2s_master_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Mando/Documents/projects/ProjectFile/hdl/i2s_master.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'i2s_master'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 5678.922 ; gain = 0.000
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_afc3.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_afc3.protoinst for the following reason(s):
+There are no instances of module "bd_afc3" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 5678.922 ; gain = 0.000
+run 15 ms
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_11 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_11 -L xilinx_vip -prj i2s_master_test_vlog.prj"
+"xvhdl --incr --relax -prj i2s_master_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Mando/Documents/projects/ProjectFile/hdl/i2s_master.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'i2s_master'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_afc3.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_afc3.protoinst for the following reason(s):
+There are no instances of module "bd_afc3" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 5678.922 ; gain = 0.000
+run 15 ms
+reset_run synth_1
+INFO: [Project 1-1160] Copying file C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+WARNING: [filemgmt 56-12] File 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [Project 1-1859] Fail to add auto incremental checkpoint C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/design_1_wrapper.dcp to utils_1 fileset.
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1
+
+update_module_reference design_1_audio_pipeline_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'axis'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+WARNING: [IP_Flow 19-5661] Bus Interface 's00_axi_aclk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Mando/Documents/projects/group_project/group_project.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1
+
+INFO: [IP_Flow 19-3420] Updated design_1_audio_pipeline_0_0 to use current project options
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+launch_runs synth_1 -jobs 11
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc/M00_AXI(0)
+Wrote  : <C:\Users\Mando\Documents\projects\group_project\group_project.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block audio_pipeline_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/Mando/Documents/projects/group_project/group_project.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 0cd60326363d5586; cache size = 179.169 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a04fe04941712846; cache size = 179.169 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_0, cache-ID = d55ca97953529195; cache size = 179.169 MB.
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Wed Nov  1 02:01:03 2023] Launched design_1_audio_pipeline_0_0_synth_1...
+Run output will be captured here: C:/Users/Mando/Documents/projects/group_project/group_project.runs/design_1_audio_pipeline_0_0_synth_1/runme.log
+[Wed Nov  1 02:01:03 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Mando/Documents/projects/group_project/group_project.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:20 . Memory (MB): peak = 5678.922 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2s_master_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim/sc_xtlm_design_1_axi_smc_0.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_11 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_11 -L xilinx_vip -prj i2s_master_test_vlog.prj"
+"xvhdl --incr --relax -prj i2s_master_test_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "i2s_master_test_behav -key {Behavioral:sim_1:Functional:i2s_master_test} -tclbatch {i2s_master_test.tcl} -protoinst "protoinst_files/bd_afc3.protoinst" -protoinst "protoinst_files/design_1.protoinst" -view {C:/Users/Mando/Documents/projects/group_project/i2s_master_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_afc3.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_afc3.protoinst for the following reason(s):
+There are no instances of module "bd_afc3" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+open_wave_config C:/Users/Mando/Documents/projects/group_project/i2s_master_test_behav.wcfg
+source i2s_master_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'i2s_master_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 5678.922 ; gain = 0.000
+run 15 ms
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_11 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_11 -L xilinx_vip -prj i2s_master_test_vlog.prj"
+"xvhdl --incr --relax -prj i2s_master_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Mando/Documents/projects/ProjectFile/hdl/i2s_master.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'i2s_master'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'i2s_master_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Mando/Documents/projects/group_project/group_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_master_test_behav xil_defaultlib.i2s_master_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_afc3.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_afc3.protoinst for the following reason(s):
+There are no instances of module "bd_afc3" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 5678.922 ; gain = 0.000
+run 15 ms
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Nov  1 02:10:36 2023...

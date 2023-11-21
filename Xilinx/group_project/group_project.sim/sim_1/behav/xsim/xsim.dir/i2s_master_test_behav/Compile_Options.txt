@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "xilinx_vip" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "i2s_master_test_behav" "xil_defaultlib.i2s_master_test" "xil_defaultlib.glbl" -log "elaborate.log" 
