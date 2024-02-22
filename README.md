@@ -59,8 +59,11 @@ source everytime
 
 
    for double check, go to:
+   
    ~ cd /opt/petalinux-2021.2
+
    Then
+
    ~ find / -name aarch64-xilinx-linux-gcc 2>/dev/null
    
    if you are x86, you should choose x86_64-petalinux-linux
