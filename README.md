@@ -8,6 +8,8 @@ compile test_wa.c
 
 cross compile  x86 - aarch64
 
+Install cross compile from x86 to aarch64 on x86 windows11.
+
 source everytime
 ~ bash
 
