@@ -73,11 +73,15 @@ source everytime
    change the makefile to this to point the cross compiler:
 
       CC       ?= aarch64-xilinx-linux-gcc
+   
       CXX      ?= aarch64-xilinx-linux-g++
+   
       SYSROOT  = /opt/petalinux/2021.1/sysroots/cortexa72-cortexa53-xilinx-linux
+   
       LIBDIR   = $(SYSROOT)/usr/lib
       
 
 
    and run:
+   
    ~ make sample256 CXX=aarch64-xilinx-linux-g++ CC=aarch64-xilinx-linux-gcc
